@@ -2,13 +2,13 @@
 
 Smart contract for sending ERC20 tokens in batches
 
-## Install
+### Install
 
 ```
 npm install
 ```
 
-## Compile
+### Compile
 
 ```
 npx hardhat compile
@@ -20,7 +20,7 @@ npx hardhat compile
 npx hardhat typechain
 ```
 
-## Test
+### Test
 
 ```
 npx hardhat test
