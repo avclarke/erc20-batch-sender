@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -17,14 +18,15 @@ contract ERC20BatchSender {
     ) external {
         require(
             tokenHolders.length == amounts.length,
-            "Invalid input parameters"
+            "Number of recipients does not match number of values"
         );
 
         uint256 total = 0;
 
         for (uint256 index = 0; index < tokenHolders.length; index++) {
             require(
-                ERC20(tokenAddress).transfer(
+                ERC20(tokenAddress).transferFrom(
+                    msg.sender,
                     tokenHolders[index],
                     amounts[index]
                 ),
