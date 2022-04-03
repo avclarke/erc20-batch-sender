@@ -9,7 +9,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const privateKey = process.env.PRIVATE_KEY;
-const apiKey = process.env.NODE_API_KEY;
+const apiKey = process.env.INFURA_KEY;
 const moralisApiKey = process.env.MORALIS_SPEED_NODE_KEY;
 
 /**

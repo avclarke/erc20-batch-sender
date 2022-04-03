@@ -25,3 +25,15 @@ npx hardhat typechain
 ```
 npx hardhat test
 ```
+
+### Deployment
+
+Create a `.env` file with the following:
+
+```
+INFURA_KEY='4583b1346bb...'
+PRIVATE_KEY='0xb2c...'
+MORALIS_SPEED_NODE_KEY='36254...'
+```
+
+Then Run `npm run deploy:<network>` to deploy
